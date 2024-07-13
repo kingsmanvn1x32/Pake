@@ -13,17 +13,18 @@ console.log('name: ', process.env.NAME);
 console.log('icon: ', process.env.ICON);
 console.log('height: ', process.env.HEIGHT);
 console.log('width: ', process.env.WIDTH);
-console.log('transparent: ', process.env.TRANSPARENT);
+console.log('hide-title-bar: ', process.env.HIDE_TITLE_BAR);
 console.log('resize: ', process.env.RESIZE);
 console.log('is multi arch? only for Mac: ', process.env.MULTI_ARCH);
 console.log('targets type? only for Linux: ', process.env.TARGETS);
+console.log('safe-domain: ', process.env.SAFE_DOMAIN);
 console.log('===========================\n');
 
 cd('node_modules/pake-cli');
 let params = `node cli.js ${process.env.URL} --name ${process.env.NAME} --height ${process.env.HEIGHT} --width ${process.env.WIDTH}`;
 
-if (process.env.TRANSPARENT === 'true') {
-  params = `${params} --transparent`;
+if (process.env.HIDE_TITLE_BAR === 'true') {
+  params = `${params} --hide-title-bar`;
 }
 
 if (process.env.FULLSCREEN === 'true') {
@@ -39,16 +40,12 @@ if (process.env.TARGETS) {
   params = `${params} --targets ${process.env.TARGETS}`;
 }
 
-if (process.platform === 'win32') {
-  params = `${params} --show-system-tray`;
+if (process.env.SAFE_DOMAIN) {
+  params = `${params} --safe-domain ${process.env.SAFE_DOMAIN}`;
 }
 
-if (process.platform === 'linux') {
+if (process.platform === 'win32' || process.platform === 'linux') {
   params = `${params} --show-system-tray`;
-}
-
-if (process.platform === 'darwin') {
-  params = `${params} --show-menu`;
 }
 
 const downloadIcon = async iconFile => {
