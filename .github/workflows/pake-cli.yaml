@@ -5,7 +5,7 @@ on:
       platform:
         description: 'platform'
         required: true
-        default: 'macos-latest'
+        default: 'windows-latest'
         type: choice
         options:
           - 'windows-latest'
@@ -14,12 +14,30 @@ on:
       url:
         description: '[URL]'
         required: true
+        default: 'https://www.facebook.com/'
+        type: choice
+        options:
+          - 'https://www.facebook.com/'
+          - 'https://discord.com/channels/@me/'
+          - 'https://chat.zalo.me/'
       name:
         description: '[Name]'
         required: true
+        default: 'Facebook'
+        type: choice
+        options:
+          - 'Facebook'
+          - 'Discord'
+          - 'ZaloPake'
       icon:
         description: '[Icon, Optional]'
         required: false
+        default: 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.ico'
+        type: choice
+        options:
+          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.ico'
+          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/discord_256.ico'
+          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/zalo.ico'
       width:
         description: '[Width, Optional]'
         required: false
