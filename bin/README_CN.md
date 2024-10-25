@@ -146,6 +146,14 @@ pake [url] [options]
 --always-on-top
 ```
 
+#### [dark-mode]
+
+强制 Mac 打包应用使用黑暗模式，默认为 `false`。
+
+```shell
+--dark-mode
+```
+
 #### [disabled-web-shortcuts]
 
 设置是否禁用原有 Pake 容器里面的网页操作快捷键，默认为 `false`。
@@ -212,6 +220,14 @@ Linux，默认为 `all`。
 --system-tray-icon <path>
 ```
 
+#### [installer-language]
+
+设置 Windows 安装包语言。支持 `zh-CN`、`ja-JP`，更多在 [Tauri 文档](https://tauri.app/zh-cn/v1/guides/building/windows/#internationalization)。默认为 `en-US`。
+
+```shell
+--installer-language <language>
+```
+
 #### [use-local-file]
 
 当 `url` 为本地文件路径时，如果启用此选项，则会递归地将 `url` 路径文件所在的文件夹及其所有子文件复
@@ -257,3 +273,20 @@ PS: 安全域名不需要携带协议。
 ## 结语
 
 完成上述步骤后，您的应用程序应该已经成功打包。请注意，根据您的系统配置和网络状况，打包过程可能需要一些时间。请耐心等待，一旦打包完成，您就可以在指定的目录中找到应用程序安装包。
+
+## Docker
+
+```shell
+# 在Linux上，您可以通过 Docker 运行 Pake CLI。
+docker run -it --rm \ # Run interactively, remove container after exit
+    -v YOUR_DIR:/output \ # Files from container's /output will be in YOU_DIR
+    ghcr.io/tw93/pake \
+    <arguments>
+
+# For example:
+docker run -it --rm \
+    -v ./packages:/output \
+    ghcr.io/tw93/pake \
+    https://example.com --name myapp --icon ./icon.png
+
+```

@@ -14,6 +14,7 @@ export async function mergeConfig(url: string, options: PakeAppOptions, tauriCon
     fullscreen,
     hideTitleBar,
     alwaysOnTop,
+    darkMode,
     disabledWebShortcuts,
     activationShortcut,
     userAgent,
@@ -25,6 +26,7 @@ export async function mergeConfig(url: string, options: PakeAppOptions, tauriCon
     resizable = true,
     inject,
     safeDomain,
+    installerLanguage,
   } = options;
 
   const { platform } = process;
@@ -38,12 +40,16 @@ export async function mergeConfig(url: string, options: PakeAppOptions, tauriCon
     hide_title_bar: hideTitleBar,
     activation_shortcut: activationShortcut,
     always_on_top: alwaysOnTop,
+    dark_mode: darkMode,
     disabled_web_shortcuts: disabledWebShortcuts,
   };
   Object.assign(tauriConf.pake.windows[0], { url, ...tauriConfWindowOptions });
 
   tauriConf.package.productName = name;
   tauriConf.tauri.bundle.identifier = identifier;
+  if (platform == "win32") {
+    tauriConf.tauri.bundle.windows.wix.language[0] = installerLanguage;
+  }
 
   //Judge the type of URL, whether it is a file or a website.
   const pathExists = await fsExtra.pathExists(url);
