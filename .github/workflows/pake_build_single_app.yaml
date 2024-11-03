@@ -52,6 +52,10 @@ jobs:
             os: ubuntu-latest
             rust: stable
             target: x86_64-unknown-linux-musl
+          - build: macos
+            os: macos-latest
+            rust: stable
+            target: x86_64-apple-darwin
           - build: windows
             os: windows-latest
             rust: stable-x86_64-msvc
@@ -97,6 +101,14 @@ jobs:
           mkdir -p output/linux
           mv src-tauri/target/release/bundle/deb/*.deb output/linux/${{inputs.title}}_`arch`.deb
           mv src-tauri/target/release/bundle/appimage/*.AppImage output/linux/"${{inputs.title}}"_`arch`.AppImage
+      - name: Build for macOS
+        if: matrix.os == 'macos-latest'
+        run: |
+          rustup target add aarch64-apple-darwin
+          rustup target add x86_64-apple-darwin
+          npm run tauri build -- --target universal-apple-darwin
+          mkdir -p output/macos
+          mv src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg output/macos/"${{inputs.title}}".dmg
       - name: Build for Windows
         if: matrix.os == 'windows-latest'
         run: |
