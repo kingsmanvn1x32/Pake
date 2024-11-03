@@ -7,6 +7,12 @@
       "url": "https://www.facebook.com/"
     },
     {
+      "name": "telegram",
+      "title": "Telegram",
+      "name_zh": "Telegram",
+      "url": "https://web.telegram.org/k/"
+    },
+    {
       "name": "discord",
       "title": "Discord",
       "name_zh": "Discord",
@@ -14,8 +20,8 @@
     },
     {
       "name": "zalo",
-      "title": "ZaloPake",
-      "name_zh": "ZaloPake",
+      "title": "Zalo",
+      "name_zh": "Zalo",
       "url": "https://chat.zalo.me/"
     }
   ]

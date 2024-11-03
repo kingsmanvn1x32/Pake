@@ -1,9 +1,8 @@
 name: Build All Popular Apps
 on:
+  workflow_dispatch:
   push:
-    tags:
-      - 'V*'
-
+    tags: [V*]
 jobs:
   read_apps_config:
     name: Read Apps Config
@@ -13,13 +12,12 @@ jobs:
       apps_config: ${{ steps.read-apps-config.outputs.apps_config }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Get Apps Config
         id: read-apps-config
         run: |
           echo "apps_name=$(jq -c '[.apps| .[] | .name]' apps.conf.json)" >> $GITHUB_OUTPUT
           echo "apps_config=$(jq -c '[.apps | .[]]' apps.conf.json)" >> $GITHUB_OUTPUT
-
   trigger_build:
     needs: read_apps_config
     name: ${{ matrix.title }}

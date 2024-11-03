@@ -3,49 +3,42 @@ on:
   workflow_dispatch:
     inputs:
       platform:
-        description: 'platform'
+        description: platform
         required: true
-        default: 'ubuntu-20.04'
+        default: ubuntu-20.04
         type: choice
-        options:
-          - 'windows-latest'
-          - 'macos-latest'
-          - 'ubuntu-20.04'
+        options: [windows-latest, macos-latest, ubuntu-20.04]
       url:
         description: '[URL]'
         required: true
-        default: 'https://www.facebook.com'
+        default: https://www.facebook.com/
         type: choice
         options:
-          - 'https://www.facebook.com'
-          - 'https://web.telegram.org'
-          - 'https://discord.com'
-          - 'https://chat.zalo.me/'
+          - https://www.facebook.com/
+          - https://web.telegram.org/k/
+          - https://discord.com/channels/@me/
+          - https://chat.zalo.me/
       name:
         description: '[Name]'
         required: true
-        default: 'facebook'
+        default: facebook
         type: choice
-        options:
-          - 'facebook'
-          - 'telegram'
-          - 'discord'
-          - 'zalo'
+        options: [facebook, telegram, discord, zalo]
       icon:
         description: '[Icon, Optional]'
         required: false
-        default: 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.png'
+        default: https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.png
         type: choice
         options:
           - '* Windows:'
-          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.ico'
-          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/discord_256.ico'
-          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/zalo_256.ico'
+          - https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.ico
+          - https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/discord_256.ico
+          - https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/zalo_256.ico
           - '* Linux:'
-          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.png'
-          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/telegram_256.png'
-          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/discord_256.png'
-          - 'https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/zalo_256.png'
+          - https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/facebook_256.png
+          - https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/telegram_256.png
+          - https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/discord_256.png
+          - https://github.com/kingsmanvn1x32/Pake/raw/master/src-tauri/png/zalo_256.png
       width:
         description: '[Width, Optional]'
         required: false
@@ -70,12 +63,9 @@ on:
       targets:
         description: '[Targets, Optional, Linux only]'
         required: false
-        default: 'appimage'
+        default: appimage
         type: choice
-        options:
-          - 'deb'
-          - 'appimage'
-          - 'all'
+        options: [deb, appimage, all]
 jobs:
   build:
     name: ${{ inputs.platform }}
