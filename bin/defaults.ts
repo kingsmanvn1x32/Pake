@@ -8,7 +8,7 @@ export const DEFAULT_PAKE_OPTIONS: PakeCliOptions = {
   resizable: true,
   hideTitleBar: false,
   alwaysOnTop: false,
-  darkMode: false,
+  darkMode: true,
   disabledWebShortcuts: false,
   activationShortcut: '',
   userAgent: '',
