@@ -2,68 +2,6 @@
   "tauri": {
     "bundle": {
       "icon": [
-        "png/facebook_512.png"
-      ],
-      "identifier": "com.pake.facebook",
-      "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": [
-          "curl",
-          "wget"
-        ],
-        "files": {
-          "/usr/share/applications/com-pake-facebook.desktop": "assets/com-pake-facebook.desktop"
-        }
-      },
-      "externalBin": [],
-      "longDescription": "",
-      "resources": [],
-      "shortDescription": "",
-      "targets": [
-        "deb",
-        "appimage"
-      ]
-    }
-  }
-}
-/*
-{
-  "tauri": {
-    "bundle": {
-      "icon": [
-        "png/telegram_512.png"
-      ],
-      "identifier": "com.pake.telegram",
-      "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": [
-          "curl",
-          "wget"
-        ],
-        "files": {
-          "/usr/share/applications/com-pake-telegram.desktop": "assets/com-pake-telegram.desktop"
-        }
-      },
-      "externalBin": [],
-      "longDescription": "",
-      "resources": [],
-      "shortDescription": "",
-      "targets": [
-        "deb",
-        "appimage"
-      ]
-    }
-  }
-}
-
-{
-  "tauri": {
-    "bundle": {
-      "icon": [
         "png/discord_512.png"
       ],
       "identifier": "com.pake.discord",
@@ -90,35 +28,3 @@
     }
   }
 }
-
-{
-  "tauri": {
-    "bundle": {
-      "icon": [
-        "png/zalo_512.png"
-      ],
-      "identifier": "com.pake.zalo",
-      "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": [
-          "curl",
-          "wget"
-        ],
-        "files": {
-          "/usr/share/applications/com-pake-zalo.desktop": "assets/com-pake-zalo.desktop"
-        }
-      },
-      "externalBin": [],
-      "longDescription": "",
-      "resources": [],
-      "shortDescription": "",
-      "targets": [
-        "deb",
-        "appimage"
-      ]
-    }
-  }
-}
-*/
