@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0.0
+Exec=com-pake-telegram
+Icon=com-pake-telegram
+Name=com-pake-telegram
+StartupWMClass=com-pake-telegram
+X-GNOME-FullName=com-pake-telegram
+GenericName=com-pake-telegram
+StartupNotify=true
+Type=Application
+NoDisplay=false
+Terminal=false

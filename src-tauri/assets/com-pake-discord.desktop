@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0.0
+Exec=com-pake-discord
+Icon=com-pake-discord
+Name=com-pake-discord
+StartupWMClass=com-pake-discord
+X-GNOME-FullName=com-pake-discord
+GenericName=com-pake-discord
+StartupNotify=true
+Type=Application
+NoDisplay=false
+Terminal=false

@@ -14,20 +14,20 @@ export const DEFAULT_PAKE_OPTIONS: PakeCliOptions = {
   userAgent: '',
   showSystemTray: false,
   multiArch: false,
-  targets: 'deb',
+  targets: 'appimage',
   useLocalFile: false,
   systemTrayIcon: '',
   debug: false,
   inject: [],
   safeDomain: [],
-  installerLanguage: 'en-US',
+  installerLanguage: 'vi-VN',
 };
 
 // Just for cli development
 export const DEFAULT_DEV_PAKE_OPTIONS: PakeCliOptions & { url: string } = {
   ...DEFAULT_PAKE_OPTIONS,
-  url: 'https://weread.qq.com',
-  name: 'WeRead',
-  safeDomain: ['weread.qq.com'],
+  url: 'https://www.facebook.com/',
+  name: 'Facebook',
+  safeDomain: ['www.facebook.com'],
   hideTitleBar: true,
 };

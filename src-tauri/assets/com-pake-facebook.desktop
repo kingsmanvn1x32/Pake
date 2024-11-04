@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0.0
+Exec=com-pake-facebook
+Icon=com-pake-facebook
+Name=com-pake-facebook
+StartupWMClass=com-pake-facebook
+X-GNOME-FullName=com-pake-facebook
+GenericName=com-pake-facebook
+StartupNotify=true
+Type=Application
+NoDisplay=false
+Terminal=false

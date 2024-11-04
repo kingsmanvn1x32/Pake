@@ -1,39 +1,158 @@
-{
-  "package": {
-    "productName": "WeRead",
-    "version": "1.0.0"
-  },
-  "tauri": {
-    "security": {
-      "csp": null,
-      "dangerousRemoteDomainIpcAccess": [
-        {
-          "domain": "weread.qq.com",
-          "windows": ["pake"],
-          "enableTauriAPI": true
-        }
-      ]
+[
+  {
+    "package": {
+      "productName": "Facebook",
+      "version": "1.0.0"
     },
-    "updater": {
-      "active": false
-    },
-    "systemTray": {
-      "iconPath": "png/icon_512.png",
-      "iconAsTemplate": false
-    },
-    "allowlist": {
-      "all": true,
-      "fs": {
+    "tauri": {
+      "security": {
+        "csp": null,
+        "dangerousRemoteDomainIpcAccess": [
+          {
+            "domain": "www.facebook.com",
+            "windows": ["pake"],
+            "enableTauriAPI": true
+          }
+        ]
+      },
+      "updater": {
+        "active": false
+      },
+      "systemTray": {
+        "iconPath": "png/facebook_512.png",
+        "iconAsTemplate": false
+      },
+      "allowlist": {
         "all": true,
-        "scope": ["$DOWNLOAD/*"]
+        "fs": {
+          "all": true,
+          "scope": ["$DOWNLOAD/*"]
+        }
       }
+    },
+    "build": {
+      "withGlobalTauri": true,
+      "devPath": "../dist",
+      "distDir": "../dist",
+      "beforeBuildCommand": "",
+      "beforeDevCommand": ""
     }
   },
-  "build": {
-    "withGlobalTauri": true,
-    "devPath": "../dist",
-    "distDir": "../dist",
-    "beforeBuildCommand": "",
-    "beforeDevCommand": ""
+  {
+    "package": {
+      "productName": "Telegram",
+      "version": "1.0.0"
+    },
+    "tauri": {
+      "security": {
+        "csp": null,
+        "dangerousRemoteDomainIpcAccess": [
+          {
+            "domain": "web.telegram.org",
+            "windows": ["pake"],
+            "enableTauriAPI": true
+          }
+        ]
+      },
+      "updater": {
+        "active": false
+      },
+      "systemTray": {
+        "iconPath": "png/telegram_512.png",
+        "iconAsTemplate": false
+      },
+      "allowlist": {
+        "all": true,
+        "fs": {
+          "all": true,
+          "scope": ["$DOWNLOAD/*"]
+        }
+      }
+    },
+    "build": {
+      "withGlobalTauri": true,
+      "devPath": "../dist",
+      "distDir": "../dist",
+      "beforeBuildCommand": "",
+      "beforeDevCommand": ""
+    }
+  },
+  {
+    "package": {
+      "productName": "Discord",
+      "version": "1.0.0"
+    },
+    "tauri": {
+      "security": {
+        "csp": null,
+        "dangerousRemoteDomainIpcAccess": [
+          {
+            "domain": "discord.com",
+            "windows": ["pake"],
+            "enableTauriAPI": true
+          }
+        ]
+      },
+      "updater": {
+        "active": false
+      },
+      "systemTray": {
+        "iconPath": "png/discord_512.png",
+        "iconAsTemplate": false
+      },
+      "allowlist": {
+        "all": true,
+        "fs": {
+          "all": true,
+          "scope": ["$DOWNLOAD/*"]
+        }
+      }
+    },
+    "build": {
+      "withGlobalTauri": true,
+      "devPath": "../dist",
+      "distDir": "../dist",
+      "beforeBuildCommand": "",
+      "beforeDevCommand": ""
+    }
+  },
+  {
+    "package": {
+      "productName": "Zalo",
+      "version": "1.0.0"
+    },
+    "tauri": {
+      "security": {
+        "csp": null,
+        "dangerousRemoteDomainIpcAccess": [
+          {
+            "domain": "chat.zalo.me",
+            "windows": ["pake"],
+            "enableTauriAPI": true
+          }
+        ]
+      },
+      "updater": {
+        "active": false
+      },
+      "systemTray": {
+        "iconPath": "png/zalo_512.png",
+        "iconAsTemplate": false
+      },
+      "allowlist": {
+        "all": true,
+        "fs": {
+          "all": true,
+          "scope": ["$DOWNLOAD/*"]
+        }
+      }
+    },
+    "build": {
+      "withGlobalTauri": true,
+      "devPath": "../dist",
+      "distDir": "../dist",
+      "beforeBuildCommand": "",
+      "beforeDevCommand": ""
+    }
   }
-}
+]
