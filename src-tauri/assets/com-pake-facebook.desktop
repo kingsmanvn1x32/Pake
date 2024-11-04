@@ -1,9 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
-Version=1.0.0
+Version=2.0.0
 Exec=com-pake-facebook
 Icon=com-pake-facebook
 Name=com-pake-facebook
+Name[zh_CN]=facebook
 StartupWMClass=com-pake-facebook
 X-GNOME-FullName=com-pake-facebook
 GenericName=com-pake-facebook

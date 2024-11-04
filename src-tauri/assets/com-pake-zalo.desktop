@@ -1,9 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
-Version=1.0.0
+Version=2.0.0
 Exec=com-pake-zalo
 Icon=com-pake-zalo
 Name=com-pake-zalo
+Name[zh_CN]=zalo
 StartupWMClass=com-pake-zalo
 X-GNOME-FullName=com-pake-zalo
 GenericName=com-pake-zalo

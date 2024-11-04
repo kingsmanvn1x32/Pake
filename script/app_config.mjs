@@ -9,14 +9,19 @@ import os from 'os';
 
 const desktopEntry = `[Desktop Entry]
 Encoding=UTF-8
-Categories=Office
+Version=2.0.0
 Exec=com-pake-${process.env.NAME}
 Icon=com-pake-${process.env.NAME}
 Name=com-pake-${process.env.NAME}
 Name[zh_CN]=${process.env.NAME_ZH}
+StartupWMClass=com-pake-${process.env.NAME}
+X-GNOME-FullName=com-pake-${process.env.NAME}
+GenericName=com-pake-${process.env.NAME}
 StartupNotify=true
-Terminal=false
 Type=Application
+NoDisplay=false
+Terminal=false
+
 `;
 
 const variables = {
